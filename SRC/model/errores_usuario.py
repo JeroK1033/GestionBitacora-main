@@ -1,7 +1,11 @@
 class ErrorNoEmail(Exception):
     def __init__(self):
-        super().__init__("Agregue un email para registrarse")
-
+        super().__init__("Agregue un email correcto para registrarse")
+        
+class ErrorCamposIncompletos(Exception):
+    def __init__(self):
+        super().__init__("Agregue todos los campos solicitados")
+        
 class ErrorContraseñaCorta(Exception):
     def __init__(self):
         super().__init__("Agregue una contraseña de minimo 8 caracteres")
